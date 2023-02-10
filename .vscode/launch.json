@@ -1,0 +1,329 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_1145",
+            "request": "launch",
+            "mainClass": "BruteForce.Main_1145",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_14568",
+            "request": "launch",
+            "mainClass": "BruteForce.Main_14568",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_14697",
+            "request": "launch",
+            "mainClass": "BruteForce.Main_14697",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_16283",
+            "request": "launch",
+            "mainClass": "BruteForce.Main_16283",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_17945",
+            "request": "launch",
+            "mainClass": "BruteForce.Main_17945",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_19532",
+            "request": "launch",
+            "mainClass": "BruteForce.Main_19532",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_2309",
+            "request": "launch",
+            "mainClass": "BruteForce.Main_2309",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_2875",
+            "request": "launch",
+            "mainClass": "BruteForce.Main_2875",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_6131",
+            "request": "launch",
+            "mainClass": "BruteForce.Main_6131",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main10859_2",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main10859_2",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_10859",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_10859",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_1407",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_1407",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_14232",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_14232",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_14476",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_14476",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_2004",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_2004",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_2023",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_2023",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_20529",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_20529",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_23888",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_23888",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_3343",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_3343",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_3944",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_3944",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_3964",
+            "request": "launch",
+            "mainClass": "NumberTheory.Main_3964",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_1244",
+            "request": "launch",
+            "mainClass": "Practice.Main_1244",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_15649",
+            "request": "launch",
+            "mainClass": "Practice.Main_15649",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_15650",
+            "request": "launch",
+            "mainClass": "Practice.Main_15650",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_2961",
+            "request": "launch",
+            "mainClass": "Practice.Main_2961",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Practice.Solution",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution_1210",
+            "request": "launch",
+            "mainClass": "Practice.Solution_1210",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution_1959",
+            "request": "launch",
+            "mainClass": "Practice.Solution_1959",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution_2001",
+            "request": "launch",
+            "mainClass": "Practice.Solution_2001",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution_2805",
+            "request": "launch",
+            "mainClass": "Practice.Solution_2805",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(1)",
+            "request": "launch",
+            "mainClass": "Prefix.Main",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_11660",
+            "request": "launch",
+            "mainClass": "Prefix.Main_11660",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_14719",
+            "request": "launch",
+            "mainClass": "Prefix.Main_14719",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_1912",
+            "request": "launch",
+            "mainClass": "Prefix.Main_1912",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_2304",
+            "request": "launch",
+            "mainClass": "Prefix.Main_2304",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_3020",
+            "request": "launch",
+            "mainClass": "Prefix.Main_3020",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_1655",
+            "request": "launch",
+            "mainClass": "PriorityQueue.Main_1655",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_17478",
+            "request": "launch",
+            "mainClass": "Recursion.Main_17478",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch PracticeRecursion",
+            "request": "launch",
+            "mainClass": "Recursion.PracticeRecursion",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution_1289",
+            "request": "launch",
+            "mainClass": "Recursion.Solution_1289",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution(1)",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Subset",
+            "request": "launch",
+            "mainClass": "Subset",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_11728",
+            "request": "launch",
+            "mainClass": "TwoPointer.Main_11728",
+            "projectName": "solve_a21a9852"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_1664",
+            "request": "launch",
+            "mainClass": "TwoPointer.Main_1664",
+            "projectName": "solve_a21a9852"
+        }
+    ]
+}
