@@ -13,7 +13,7 @@ public class Main_bliz {
     public static int m;
     public static int r;
     public static int sharkPos;
-    public static int[] explode = new int[3];
+    public static int[] destroyed = new int[4];
     public static int[][] field;
     public static Deque<Integer> bids;
     public static int[] dxIce = { 0, -1, 1, 0, 0 };
@@ -81,7 +81,7 @@ public class Main_bliz {
             x = (x + dxIce[dir] + 50 * n) % n;
             y = (y + dyIce[dir] + 50 * n) % n;
             if (inRange(x, y)) {
-                explode[field[x][y] + 1]++;
+                destroyed[field[x][y]]++;
                 field[x][y] = 0;
             }
         }
@@ -89,22 +89,42 @@ public class Main_bliz {
         bids2Field();
     }
 
-    public static void explodeBids() {
-        int numEqual = 0;
-        int count = 0;
+    public static boolean explodeBids() {
+        boolean isExplode = false;
+        int numEqual = bids.poll();
+        int count = 1;
         Deque<Integer> tmp = new ArrayDeque<>();
 
-        for (int i = 0; i < bids.size(); i++) {
+        while (!bids.isEmpty()) {
             int num = bids.poll();
             if (num == numEqual)
                 count++;
             else {
-                for (int j = 0; j < count; j++) {
-                    tmp.add(numEqual);
+                if (count < 4)
+                    for (int i = 0; i < count; i++) {
+                        tmp.add(numEqual);
+                    }
+                else {
+                    destroyed[num] += count;
+                    isExplode = true;
                 }
-                x
                 numEqual = num;
+                count = 1;
             }
+        }
+        for (int i = 0; i < count; i++) {
+            tmp.add(numEqual);
+        }
+        bids = tmp;
+        bids2Field();
+        return isExplode;
+    }
+
+    public static void blizzard(int dir, int s) {
+        throwIce(dir, s);
+        for (;;) {
+            if (!explodeBids())
+                break;
         }
     }
 
@@ -125,7 +145,10 @@ public class Main_bliz {
             }
         }
         field2Bids();
-        bids2Field();
+        for (int i = 0; i < m; i++) {
+            st = new StringTokenizer(bf.readLine());
+            blizzard(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
+        }
         System.out.println(bids.toString());
         System.out.println(Arrays.deepToString(field));
         bw.flush();
