@@ -1,3 +1,4 @@
+package TwoPointer;
 
 /*
  * 투포인터 사용해 0에 가까운 값 찾기 => 절댓값이 작은 값
@@ -12,7 +13,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Main_2467 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
