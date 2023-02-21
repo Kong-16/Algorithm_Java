@@ -1,3 +1,4 @@
+package Simulation;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -6,7 +7,7 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main_raint {
+public class Main_21610 {
     public static int n;
     public static int m;
     public static int[][] field;

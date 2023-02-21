@@ -1,14 +1,14 @@
+package Simulation;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.Deque;
 import java.util.StringTokenizer;
 
-public class Main_bliz {
+public class Main_21611 {
     public static int n;
     public static int m;
     public static int r;
@@ -54,11 +54,9 @@ public class Main_bliz {
         visited[x][y] = true;
         Deque<Integer> tmp = new ArrayDeque<>();
         int dir = 0;
-        // int it = 0;
         while (x + y != 0) {
             x = (x + dxBid[dir] + 50 * n) % n;
             y = (y + dyBid[dir] + 50 * n) % n;
-            // field[x][y] = it < bids.size() ? bids.get(it++) : 0;
             if (!bids.isEmpty()) {
                 field[x][y] = bids.peek();
                 tmp.add(bids.poll());
@@ -81,7 +79,6 @@ public class Main_bliz {
             x = (x + dxIce[dir] + 50 * n) % n;
             y = (y + dyIce[dir] + 50 * n) % n;
             if (inRange(x, y)) {
-                destroyed[field[x][y]]++;
                 field[x][y] = 0;
             }
         }
@@ -90,13 +87,16 @@ public class Main_bliz {
     }
 
     public static boolean explodeBids() {
+        if (bids.isEmpty())
+            return false;
         boolean isExplode = false;
         int numEqual = bids.poll();
         int count = 1;
+        int num = 0;
         Deque<Integer> tmp = new ArrayDeque<>();
 
         while (!bids.isEmpty()) {
-            int num = bids.poll();
+            num = bids.poll();
             if (num == numEqual)
                 count++;
             else {
@@ -105,19 +105,47 @@ public class Main_bliz {
                         tmp.add(numEqual);
                     }
                 else {
-                    destroyed[num] += count;
+                    destroyed[numEqual] += count;
                     isExplode = true;
                 }
                 numEqual = num;
                 count = 1;
             }
         }
-        for (int i = 0; i < count; i++) {
-            tmp.add(numEqual);
+        if (count < 4)
+            for (int i = 0; i < count; i++) {
+                tmp.add(numEqual);
+            }
+        else {
+            destroyed[numEqual] += count;
+            isExplode = true;
         }
         bids = tmp;
         bids2Field();
         return isExplode;
+    }
+
+    public static void splitBids() {
+        if (bids.isEmpty())
+            return;
+        Deque<Integer> tmp = new ArrayDeque<>();
+        int numEqual = bids.poll();
+        int count = 1;
+        while (!bids.isEmpty()) {
+            int num = bids.poll();
+            if (num == numEqual)
+                count++;
+            else {
+                tmp.add(count);
+                tmp.add(numEqual);
+                numEqual = num;
+                count = 1;
+            }
+        }
+        tmp.add(count);
+        tmp.add(numEqual);
+        bids = tmp;
+        bids2Field();
     }
 
     public static void blizzard(int dir, int s) {
@@ -126,6 +154,7 @@ public class Main_bliz {
             if (!explodeBids())
                 break;
         }
+        splitBids();
     }
 
     public static void main(String[] args) throws IOException {
@@ -149,8 +178,11 @@ public class Main_bliz {
             st = new StringTokenizer(bf.readLine());
             blizzard(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
         }
-        System.out.println(bids.toString());
-        System.out.println(Arrays.deepToString(field));
+        int ans = 0;
+        for (int i = 1; i <= 3; i++) {
+            ans += i * destroyed[i];
+        }
+        bw.write(ans + "\n");
         bw.flush();
         bw.close();
     }
