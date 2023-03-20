@@ -1,5 +1,4 @@
-package Practice;
-
+package BinarySearch;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -7,37 +6,38 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Main_2805 {
+public class Main_1654 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
+        int k = Integer.parseInt(st.nextToken());
         int n = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
-        int[] trees = new int[n];
-        st = new StringTokenizer(br.readLine());
-        int start = 0;
-        int end = Integer.MIN_VALUE;
-        for (int i = 0; i < n; i++) {
-            trees[i] = Integer.parseInt(st.nextToken());
-            if (end < trees[i])
-                end = trees[i];
+        int[] lines = new int[k];
+        long start = 1;
+        long end = 0;
+        for (int i = 0; i < k; i++) {
+            lines[i] = Integer.parseInt(br.readLine());
+            end = Math.max(end, lines[i]);
         }
-        while (start < end) {
-            int mid = (start + end) / 2;
-            long sum = 0;
-            for (int t : trees) {
-                if (0 < t - mid)
-                    sum += (t - mid);
+        long ans = start;
+        while (start <= end) {
+            long mid = (start + end) / 2;
+            long cnt = 0;
+            for (int i = 0; i < k; i++) {
+                cnt += lines[i] / mid;
             }
-            if (sum < m) {
-                end = mid;
+            if (cnt < n) {
+                end = mid - 1;
             } else {
+                ans = mid;
                 start = mid + 1;
             }
         }
-        bw.write(start - 1 + "\n");
+        bw.write(ans + "\n");
         bw.flush();
         bw.close();
+
     }
+
 }
